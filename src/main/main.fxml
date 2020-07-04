@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="334.0" style="-fx-background-color: #5399C1;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <children>
+      <Pane layoutX="13.0" layoutY="11.0" prefHeight="245.0" prefWidth="308.0" style="-fx-background-color: #994646;">
+         <children>
+            <Label layoutX="26.0" layoutY="24.0" prefHeight="20.0" prefWidth="45.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailtxt" layoutX="26.0" layoutY="56.0" />
+            <Label layoutX="29.0" layoutY="113.0" text="Mot de passe" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordtxt" layoutX="26.0" layoutY="151.0" />
+            <Button layoutX="191.0" layoutY="192.0" mnemonicParsing="false" onAction="#login" text="Envoyer" textFill="#8c3e3e">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

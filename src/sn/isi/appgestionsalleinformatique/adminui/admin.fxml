@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="489.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.isi.appgestionsalleinformatique.adminui.AdminController">
+   <children>
+      <Pane layoutX="14.0" layoutY="47.0" prefHeight="420.0" prefWidth="270.0">
+         <children>
+            <TextField fx:id="nomtxt" layoutX="14.0" layoutY="24.0" />
+            <TextField fx:id="prenomtxt" layoutX="14.0" layoutY="81.0" />
+            <TextField fx:id="emailtxt" layoutX="14.0" layoutY="136.0" />
+            <TextField fx:id="etattxt" layoutX="14.0" layoutY="261.0" />
+            <Label layoutX="14.0" layoutY="4.0" prefHeight="17.0" prefWidth="37.0" text="Nom" textFill="#a73b3b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="61.0" prefHeight="20.0" prefWidth="59.0" text="Prenom" textFill="#a73b3b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="116.0" prefHeight="17.0" prefWidth="49.0" text="Email" textFill="#a73b3b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <PasswordField fx:id="passwordtxt" layoutX="14.0" layoutY="198.0" />
+            <Label layoutX="14.0" layoutY="178.0" prefHeight="20.0" prefWidth="102.0" text="Mot de passe" textFill="#a73b3b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label layoutX="19.0" layoutY="241.0" prefHeight="17.0" prefWidth="49.0" text="Etat" textFill="#a73b3b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="299.0" prefHeight="17.0" prefWidth="74.0" text="Profile" textFill="#a73b3b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="profilecbx" layoutX="13.0" layoutY="319.0" prefWidth="150.0" promptText="Faites votre choix" />
+            <Button fx:id="validerbt" layoutX="18.0" layoutY="370.0" mnemonicParsing="false" onAction="#ajout" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #a73b3b;" text="Valider" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="annulerbt" layoutX="160.0" layoutY="370.0" mnemonicParsing="false" onAction="#actualiser" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #a73b3b;" text="Annuler" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Label fx:id="messagelb" layoutX="261.0" layoutY="14.0" prefHeight="28.0" prefWidth="387.0" text="Gestion Salle Informatique" textFill="#a73b3b">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="320.0" layoutY="80.0" prefHeight="373.0" prefWidth="516.0">
+         <children>
+            <Button fx:id="supprimerbt" layoutX="24.0" layoutY="334.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #a73b3b;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierbt" layoutX="214.0" layoutY="334.0" mnemonicParsing="false" onAction="#modifier" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #a73b3b;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="quitterbt" layoutX="410.0" layoutY="334.0" mnemonicParsing="false" onAction="#deconnexion" style="-fx-background-color: #a73b3b;" text="Quitter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="admintable" layoutX="14.0" layoutY="14.0" onMouseClicked="#tableClicked" prefHeight="200.0" prefWidth="503.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="25.333343505859375" text="Id" />
+                <TableColumn fx:id="nomColumn" prefWidth="86.33331298828125" text="Nom" />
+                  <TableColumn fx:id="prenomColumn" prefWidth="91.66671752929688" text="Prenom" />
+                  <TableColumn fx:id="emailColumn" prefWidth="78.66668701171875" text="Email" />
+                  <TableColumn fx:id="passwordColumn" prefWidth="90.6666259765625" text="Mot de passe" />
+                  <TableColumn fx:id="etatColumn" prefWidth="46.0" text="Etat" />
+                  <TableColumn fx:id="profileColumn" prefWidth="79.66668701171875" text="Profile" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
